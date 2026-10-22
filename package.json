@@ -1,0 +1,13 @@
+{
+  "name": "prueba-6to",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend con Neon y proyecto hola",
+  "scripts": {
+    "start": "npm --prefix Prueba/backend start",
+    "start:dev": "npm --prefix Prueba/backend run start:dev",
+    "dev": "npm --prefix hola run dev",
+    "dev:backend": "npm --prefix Prueba/backend run start:dev",
+    "dev:hola": "npm --prefix hola run dev"
+  }
+}
