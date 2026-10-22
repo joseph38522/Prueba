@@ -49,6 +49,8 @@ PORT=3000
 
 ### Ejemplo de creación
 
+En Postman o Thunder Client usa **Body → raw → JSON** y envía el objeto directamente, sin comillas alrededor:
+
 ```json
 {
   "name": "Joseph",

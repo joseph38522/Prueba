@@ -17,6 +17,16 @@ app.get('/', (req, res) => {
 
 app.use('/user', userRoutes)
 
+app.use((error, req, res, next) => {
+    if (error instanceof SyntaxError && error.status === 400 && 'body' in error) {
+        return res.status(400).json({
+            message: 'JSON inválido. Envía un objeto JSON, sin comillas alrededor del objeto.'
+        })
+    }
+
+    next(error)
+})
+
 AppDataSource.initialize()
     .then(() => {
         console.log('Base de datos conectada')
